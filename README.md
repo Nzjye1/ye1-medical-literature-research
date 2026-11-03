@@ -66,4 +66,6 @@
 
 微信：**ye1aikeyan** · 邮箱：[ye1aikeyan@163.com](mailto:ye1aikeyan@163.com)
 
-本仓库自有内容采用 [MIT License](LICENSE)；引用的第三方资源保留其原有许可与署名。
+本仓库中 Ye1 拥有授权权利的内容采用 [CC BY-NC 4.0](LICENSE)；第三方资源保留其原有许可与署名。
+
+本版许可范围与历史 MIT 授权见 [许可与历史声明](LICENSING.md)。
