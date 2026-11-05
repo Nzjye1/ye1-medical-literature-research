@@ -24,6 +24,8 @@ python3 <skill>/scripts/local_library.py attach --topic <库/主题目录> --pmi
 
 没有 PMID 可使用 `--doi` 或 `--local-id`。脚本不获取或保存账号密钥，也不绕过付费墙。多个不同版本或补充材料须另行核对；自动下载只保存主文，不声称已取得补充材料。
 
+除 PMC 数据集外，Agent 可把公开 PMID／DOI 写入任务目录中的 JSON `{"items":[{"pmid":"真实PMID"},{"doi":"真实DOI"}]}`，运行 `python3 <skill>/scripts/find_fulltext_links.py --input ids.json --out links.json` 查询 Europe PMC 的全文链接与可用状态。一次最多 50 项；返回的候选有来源、标识、论文类型及链接，`links_only_not_fetched` 明确表示**尚未下载或阅读**，不得据此称取得全文。查询失败记录错误并可按需重试；记录可能是预印本或作者稿，应核对版本与同一研究身份。用宿主实际可用工具打开／取得合法可用的资料，或用 `attach` 导入用户有权提供的全文；未发现链接不代表其他渠道没有全文。
+
 主题报告用不覆盖旧报告的文件名保存在主题目录，报告引用的本地文件保留可访问路径。通过主题索引打开，或按题名、作者、年份、PMID、DOI 搜索：
 
 ```text
